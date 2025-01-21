@@ -12,3 +12,4 @@ C:\Users\Administrateur\Desktop\DEV\05-C# Avancé\DemoClasses\Demo01\obj\Debug\n
 C:\Users\Administrateur\Desktop\DEV\05-C# Avancé\DemoClasses\Demo01\obj\Debug\net8.0\Demo01.pdb
 C:\Users\Administrateur\Desktop\DEV\05-C# Avancé\DemoClasses\Demo01\obj\Debug\net8.0\Demo01.genruntimeconfig.cache
 C:\Users\Administrateur\Desktop\DEV\05-C# Avancé\DemoClasses\Demo01\obj\Debug\net8.0\ref\Demo01.dll
+C:\Users\Administrateur\Desktop\DEV\05-C# Avancé\DemoClasses\Demo01\obj\Debug\net8.0\Demo01.sourcelink.json

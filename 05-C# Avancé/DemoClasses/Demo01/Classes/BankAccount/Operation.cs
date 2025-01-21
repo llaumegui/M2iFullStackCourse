@@ -4,7 +4,7 @@ public class Operation
 {
     private string _id;
     private double _amount;
-    private int _operationCount = 0;
+    private static int _operationCount = 0;
     private OperationType _type;
     
     public OperationType Type => _type;
@@ -17,7 +17,7 @@ public class Operation
         _id = _operationCount++.ToString();
     }
 
-    public override string ToString() => $"n°{_id} - {_type} | {(_type==OperationType.Deposit?"+":"-")}{_amount}€";
+    public override string ToString() => $"n°{_id} - {_type} | {(_type==OperationType.Deposit?"+":"-")}{_amount:N2}€";
 }
 
 public enum OperationType

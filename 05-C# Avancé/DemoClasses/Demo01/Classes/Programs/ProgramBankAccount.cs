@@ -1,11 +1,5 @@
-﻿using Demo01.Classes.BankAccount;
-using Demo01.Classes.Menus;
-
-namespace Demo01;
-
-class Program
-{
-    static void Main(string[] args)
+/*
+ static void Main(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
@@ -137,4 +131,5 @@ class Program
             Console.ReadLine();
         }
     }
-}
+    */
+
