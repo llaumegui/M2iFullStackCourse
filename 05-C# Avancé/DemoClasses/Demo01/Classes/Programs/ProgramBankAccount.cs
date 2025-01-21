@@ -45,7 +45,7 @@
                 }
 
                 Console.Write("Votre choix: ");
-                if (mainMenu.TryKey(Console.ReadLine(), client.BankAccounts.Count > 0, out menuKey))
+                if (mainMenu.TryKey(Console.ReadLine(), condition > 0, out menuKey))
                     break;
             }
             Console.Clear();

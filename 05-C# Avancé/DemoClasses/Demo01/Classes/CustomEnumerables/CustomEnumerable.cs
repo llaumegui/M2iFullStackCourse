@@ -2,22 +2,24 @@ namespace Demo01.Classes.CustomEnumerables;
 
 public abstract class CustomEnumerable<T>
 {
-    protected T[]? _values;
-    public int Count => _values?.Length==null? 0: _values!.Length;
+    protected T[]? _values = [];
+    public int Count => _values!.Length;
+    public T? this[int index]=>_values?.Length==0 ? default(T) :_values![index];
 
     public abstract T Pop();
     
-    public virtual void Push(T value)
+    public void Push(T value)
     {
         T[] newValues = new T[Count+1];
         for(int i=0;i<Count;i++)
             newValues[i] = _values![i];
         newValues[newValues.Length - 1] = value;
+        _values = newValues;
     }
     public T Take(int index)
     {
         T val = default!;
-        val = Get(index);
+        val = _values[index];
         Remove(_values[index]);
         return val;
     }
@@ -53,19 +55,17 @@ public abstract class CustomEnumerable<T>
             if(found)
                 temp[i-1] = _values[i];
             else
-                temp[i] = _values[i-1];
+                temp[i] = _values[i];
         }
         _values = temp;
     }
 
     
-    private T Get(int index) => _values[index];
     public override string ToString()
     { 
         string result = "";
         for(int i=0;i<Count;i++)
-            result += _values[i]?.ToString() ?? "null";
+            result += $"{(_values[i]?.ToString() ?? "null")},\n";
         return result;
     }
-
 }
