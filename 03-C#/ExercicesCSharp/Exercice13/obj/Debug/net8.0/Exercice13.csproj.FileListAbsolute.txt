@@ -1,0 +1,14 @@
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\bin\Debug\net8.0\Exercice13.exe
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\bin\Debug\net8.0\Exercice13.deps.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\bin\Debug\net8.0\Exercice13.runtimeconfig.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\bin\Debug\net8.0\Exercice13.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\bin\Debug\net8.0\Exercice13.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\refint\Exercice13.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\Exercice13.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice13\obj\Debug\net8.0\ref\Exercice13.dll

@@ -1,0 +1,11 @@
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("--- Calcul des intérêts ---\n");
+Console.Write("Entrez le Capital de départ (en €): ");
+float capital = float.Parse(Console.ReadLine()!);
+Console.Write("Entrez le taux d'intérêt (en %): ");
+float tax = 1 + (float.Parse(Console.ReadLine()!) / 100f);
+Console.Write("Entrez la durée de l'épargne (en années): ");
+float time = float.Parse(Console.ReadLine()!);
+float total = capital*MathF.Pow(tax, time);
+Console.WriteLine($"\nLe montant des intérêts sera de {total-capital:N2}€ après {time} ans");
+Console.WriteLine($"Le capital final sera de {total:N2}€");

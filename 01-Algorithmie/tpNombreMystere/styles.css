@@ -1,0 +1,33 @@
+.central{
+    display: flex;margin: auto; gap: 400px;justify-content: center;
+}
+
+.lagaf{
+    object-fit: cover;
+    width: 100%;
+}
+.title{
+    object-fit: cover;
+    width: 100%;
+}
+
+.btn{
+    width: 1000px;
+    height: 800px;
+    font-size: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.containerLagaf{
+    display: flex;
+    width: 2000px;
+    height: 2000px;
+}
+
+.containerTitle{
+    display: flex;
+    width: 4000px;
+    height: 1000px;
+    margin: auto;justify-content: center;
+}

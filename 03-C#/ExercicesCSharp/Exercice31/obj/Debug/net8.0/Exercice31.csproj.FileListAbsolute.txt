@@ -1,0 +1,14 @@
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\bin\Debug\net8.0\Exercice31.exe
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\bin\Debug\net8.0\Exercice31.deps.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\bin\Debug\net8.0\Exercice31.runtimeconfig.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\bin\Debug\net8.0\Exercice31.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\bin\Debug\net8.0\Exercice31.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\refint\Exercice31.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\Exercice31.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice31\obj\Debug\net8.0\ref\Exercice31.dll

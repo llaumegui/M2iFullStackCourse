@@ -1,0 +1,14 @@
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\bin\Debug\net8.0\ExerciceFizzBuzz.exe
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\bin\Debug\net8.0\ExerciceFizzBuzz.deps.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\bin\Debug\net8.0\ExerciceFizzBuzz.runtimeconfig.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\bin\Debug\net8.0\ExerciceFizzBuzz.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\bin\Debug\net8.0\ExerciceFizzBuzz.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\refint\ExerciceFizzBuzz.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ExerciceFizzBuzz.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceFizzBuzz\obj\Debug\net8.0\ref\ExerciceFizzBuzz.dll

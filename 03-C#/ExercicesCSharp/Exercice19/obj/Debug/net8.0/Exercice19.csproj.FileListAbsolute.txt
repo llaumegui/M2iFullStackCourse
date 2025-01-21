@@ -1,0 +1,14 @@
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\bin\Debug\net8.0\Exercice19.exe
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\bin\Debug\net8.0\Exercice19.deps.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\bin\Debug\net8.0\Exercice19.runtimeconfig.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\bin\Debug\net8.0\Exercice19.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\bin\Debug\net8.0\Exercice19.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\refint\Exercice19.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\Exercice19.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\Exercice19\obj\Debug\net8.0\ref\Exercice19.dll

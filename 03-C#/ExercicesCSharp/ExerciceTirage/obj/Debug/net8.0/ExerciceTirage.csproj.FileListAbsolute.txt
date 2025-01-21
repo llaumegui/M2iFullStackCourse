@@ -1,0 +1,14 @@
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\bin\Debug\net8.0\ExerciceTirage.exe
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\bin\Debug\net8.0\ExerciceTirage.deps.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\bin\Debug\net8.0\ExerciceTirage.runtimeconfig.json
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\bin\Debug\net8.0\ExerciceTirage.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\bin\Debug\net8.0\ExerciceTirage.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\refint\ExerciceTirage.dll
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.pdb
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ExerciceTirage.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\DEV\03-C#\ExercicesCSharp\ExerciceTirage\obj\Debug\net8.0\ref\ExerciceTirage.dll
