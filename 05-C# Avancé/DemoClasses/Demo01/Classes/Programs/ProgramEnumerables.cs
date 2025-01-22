@@ -1,6 +1,4 @@
-using Demo01.Classes.CustomEnumerables;
-using Demo01.Classes.Menus;
-
+/*
 bool isStack = true;
 CustomEnumerable<string> s;
 if (isStack)
@@ -68,3 +66,4 @@ while (true)
     Console.Write("Appuyez sur Entrée pour continuer");
     Console.ReadLine();
 }
+*/
