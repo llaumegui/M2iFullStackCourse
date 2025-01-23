@@ -1,0 +1,6 @@
+Key-value pair (Redis)
+Document-oriented (MongoDb)
+Column-oriented (Cassandra)
+Graph-based (Neo4j)
+Time series (InfluxDB)
+Object Based (ObjectDB)
