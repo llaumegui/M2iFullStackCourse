@@ -32,6 +32,14 @@ Console.WriteLine("----- EXERCICE 09 -----");
 Exercise09();
 Console.WriteLine("----- EXERCICE 10 -----");
 Exercise10();
+Console.WriteLine("----- EXERCICE 11 -----");
+Exercise11();
+Console.WriteLine("----- EXERCICE 12 -----");
+Exercise12();
+Console.WriteLine("----- EXERCICE 13 -----");
+Exercise13();
+Console.WriteLine("----- EXERCICE 14 -----");
+Exercise14();
 
 // Trouver toutes les personnes de Paris.
 void Exercise01()
@@ -42,7 +50,8 @@ void Exercise01()
 // Trouver les noms des personnes ayant plus de 30 ans.
 void Exercise02()
 {
-    people.Where(x => x.Age > 30).ToList().ForEach(DisplayPerson);
+    //people.Where(x => x.Age > 30).ToList().ForEach(DisplayPerson);
+    people.Where(x => x.Age > 30).Select(x=>x.Name).ToList().ForEach(Console.WriteLine);
 }
 
 // Trier les personnes par âge croissant.
@@ -90,13 +99,36 @@ void Exercise09()
 // Grouper les personnes par ville et afficher le nombre de personnes dans chaque ville.
 void Exercise10()
 {
-    people.GroupBy(x=>x.City).ToList().ForEach(x=>Console.WriteLine($"{x.Key}: {x.Count()}"));
+    //people.GroupBy(x=>x.City).ToList().ForEach(x=>Console.WriteLine($"{x.Key}: {x.Count()}"));
+    people.GroupBy(p=>p.City)
+        .Select(g=>new{City = g.Key,Count = g.Count()})
+        .ToList().ForEach(Console.WriteLine);
 }
 
-/*
-Grouper les personnes par ville et afficher le nombre de personnes dans chaque ville.
-Créer une séquence infinie de nombres pairs et récupérer les 10 premiers.
-Paginer une liste de nombres de 1 à 100 pour obtenir le 3ème bloc de 10 nombres (21 à 30).
-Trouver le nombre maximum dans une liste d'entiers. [4, 8, 15, 16, 23, 42]
-Filtrer les mots d'une liste contenant plus de 5 lettres. ["chat", "ordinateur", "table", "lampe", "programme"]
-*/
+// Créer une séquence infinie de nombres pairs et récupérer les 10 premiers.
+void Exercise11()
+{
+    Enumerable.Range(0,Int32.MaxValue).Select(x=>x*2).Take(10).ToList().ForEach(x=>Console.WriteLine($"{x}"));
+}
+
+// Paginer une liste de nombres de 1 à 100 pour obtenir le 3ème bloc de 10 nombres (21 à 30).
+void Exercise12()
+{
+    //Enumerable.Range(1,100).Skip(20).Reverse().Skip(70).Reverse().ToList().ForEach(x=>Console.WriteLine($"{x}"));
+    Enumerable.Range(1,100).Skip(20).Take(10).ToList().ForEach(x=>Console.WriteLine($"{x}"));
+}
+
+// Trouver le nombre maximum dans une liste d'entiers. [4, 8, 15, 16, 23, 42]
+void Exercise13()
+{
+    int[] arr = [4, 8, 15, 16, 23, 42];
+    Console.WriteLine(arr.Max());
+}
+
+// Filtrer les mots d'une liste contenant plus de 5 lettres. ["chat", "ordinateur", "table", "lampe", "programme"]
+void Exercise14()
+{
+    string[] arr = ["chat", "ordinateur", "table", "lampe", "programme"];
+    arr.Where(x=>x.Length>5).ToList().ForEach(x=>Console.WriteLine($"{x}"));
+}
+
