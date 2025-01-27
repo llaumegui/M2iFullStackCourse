@@ -85,5 +85,98 @@ GROUP BY p.first_name
 
 -- Niveau 7 : Sous-requêtes
 -- Récupérez les maîtres qui possèdent le chien le plus lourd.
+SELECT p.first_name, p.last_name, c.weight
+FROM [Personne] AS p
+    INNER JOIN [Chien] AS c
+    ON p.id = c.owner_id
+WHERE c.weight = (
+    SELECT MAX(weight)
+    FROM [Chien]
+)
 
 -- Affichez les chiens qui ont un maître dont l'âge est supérieur à 40 ans.
+SELECT c.name, c.breed, p.age
+FROM [Chien] AS c
+    INNER JOIN [Personne] AS p
+    ON p.id = c.owner_id
+WHERE p.age>40
+
+-- Niveau 8 : Cas complexes
+-- Listez les maîtres n'ayant pas de chien.
+SELECT p.first_name, p.last_name
+FROM [Personne] AS p
+    LEFT JOIN [Chien] AS c
+    ON p.id = c.owner_id
+WHERE c.owner_id IS NULL
+
+-- Affichez la race la plus courante parmi les chiens.
+WITH RaceCounts AS (
+    SELECT 
+        breed, 
+        COUNT(*) AS occurrence
+    FROM 
+        [Chien]
+    GROUP BY 
+        breed
+)
+SELECT 
+    breed, 
+    occurrence
+FROM 
+    [RaceCounts]
+WHERE 
+    occurrence = (
+        SELECT MAX(occurrence) 
+        FROM RaceCounts
+        );
+
+-- Listez tous les maîtres qui possèdent au moins deux chiens.
+SELECT p.first_name, p.last_name,count(*) AS nbChiens
+FROM [Personne] AS p
+    INNER JOIN [Chien] AS c
+    ON p.id = c.owner_id
+GROUP BY p.first_name,p.last_name
+HAVING count(*) >=2
+
+-- Niveau 9 : FULL OUTER JOIN combiné
+/* Récupérez une liste combinée de chiens sans maîtres
+et de maîtres sans chiens.*/
+SELECT p.first_name, p.last_name, c.name
+FROM [Personne] AS p
+    FULL JOIN [Chien] AS c
+    ON p.id = c.owner_id
+WHERE c.owner_id IS NULL
+
+
+/*Affichez le maître et ses chien associés avec
+somme de leur tailles respectives (taille du maître et des chiens).*/
+SELECT p.first_name, SUM(c.size) AS heights FROM [Chien] c
+INNER JOIN [Personne] AS p
+ON p.id = c.owner_id
+GROUP BY p.first_name
+
+-- Niveau 10 : INSERT
+/* Ajoutez un nouveau maître nommé "Arya Stark"
+âgé de 18 ans, habitant à "Winterfell"
+ avec un numéro de téléphone "1231231234".*/
+INSERT INTO Personne
+VALUES 
+   ('Arya', 'Stark', 18, '1231231234', 'Winterfell')
+/* Insérez un nouveau chien nommé "Nymeria"
+(race : Loup géant, âge : 3 ans, taille : 120 cm, poids : 60 kg)
+appartenant à Arya Stark.*/
+INSERT INTO Chien
+VALUES 
+   ('Nymeria', 'Loup géant', 3, 120.0, 60.0, 11)
+
+-- Niveau 2 : UPDATE
+--Modifiez le poids du chien "Milou" pour le mettre à 9 kg.
+UPDATE [Chien]
+SET weight = 9.0
+WHERE name = 'Milou'
+
+-- Changez l'adresse de "Daenerys Targaryen" pour "Dragonstone"
+
+
+/* Mettez à jour tous les chiens
+sans maître pour les associer à "Sherlock Holmes".*/
