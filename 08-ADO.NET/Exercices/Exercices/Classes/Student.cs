@@ -99,7 +99,7 @@ public struct Student
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@classId", student.ClassId!=-1 ? student.ClassId :);
             command.Parameters.AddWithValue("@dateOfDiploma", student.DateOfDiploma!=DateTime.Parse("9999-01-01")?student.DateOfDiploma:DBNull.Value);
-            if (command.ExecuteNonQuery() > 1)
+            if (command.ExecuteNonQuery() > 0)
                 return true;
         }
         */
@@ -135,7 +135,7 @@ public struct Student
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@firstName", student.FirstName);
             command.Parameters.AddWithValue("@lastName", student.LastName);
-            if (command.ExecuteNonQuery() > 1)
+            if (command.ExecuteNonQuery() > 0)
                 return true;
         }
 
@@ -151,7 +151,7 @@ public struct Student
                            "WHERE id = @id";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
-            if (command.ExecuteNonQuery() > 1)
+            if (command.ExecuteNonQuery() > 0)
                 return true;
         }
 
