@@ -2,52 +2,7 @@
 using EFCore_Exercises.Models;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-string Menu()
-{
-    Console.WriteLine(
-        "  ____\n |  _ \\ ___ _ __ ___  ___  __  __ __  _  __ _  __ _  ___ \n | |_) / _ \\ '__/ __|/ _ \\|  \\| ||  \\| |/ _` |/ _` |/ _ \\\n |  __/  __/ |  \\__ \\ (_) | |\\  || |\\  | (_| | (_| |  __/\n |_|   \\___|_|  |___/\\___/|_| \\_||_| \\_|\\__,_|\\__, |\\___|\n                                       \t      |___/");
-    Console.WriteLine("1. Créer un personnage");
-    Console.WriteLine("2. Mettre à jour un personnage");
-    Console.WriteLine("3. Afficher tous les personnages");
-    Console.WriteLine("4. Taper un personnage");
-    Console.WriteLine("5. Afficher les personnages avec des PVs supérieur à la moyenne");
-    Console.WriteLine("0. Quitter");
-
-    Console.Write("Votre choix: ");
-    return Console.ReadLine();
-}
-
 using var context = new ApplicationDbContext();
-while (true)
-{
-    string choice = Menu();
-    switch (choice)
-    {
-        case "1":
-            CreateCharacter();
-            break;
-        case "2":
-            UpdateCharacter();
-            break;
-        case "3":
-            ShowCharacters();
-            break;
-        case "4":
-            HitCharacter();
-            break;
-        case "5":
-            ShowCharacters(ShowCondition.HpOverAverage);
-            break;
-        case "0":
-            return;
-        default:
-            Console.WriteLine("Une erreur est survenue");
-            break;
-    }
-
-    Console.ReadLine();
-    Console.Clear();
-}
 
 void CreateCharacter()
 {
@@ -163,9 +118,3 @@ void ShowCharacters(ShowCondition condition = ShowCondition.None)
 
 
 void KillCharacter(Character character) { context.Characters.Remove(character); }
-
-public enum ShowCondition
-{
-    HpOverAverage,
-    None,
-}
