@@ -50,5 +50,10 @@ public class CharacterRepository : ICharacterRepository
         context.Characters.Remove(character);
         return context.SaveChanges()!=0;
     }
-    
+
+    public bool Save()
+    {
+        using var context = new ApplicationDbContext();
+        return context.SaveChanges()!=0;
+    }
 }

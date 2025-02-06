@@ -66,7 +66,7 @@ public class AppController(IHM display)
         character.KillCount = parseSuccess ? kills : character.KillCount;
 
         _display.ShowOutput($"L'opération a " +
-                            (_repository.Update(character) ? "réussi" : "échoué"));
+                            (_repository.Save() ? "réussi" : "échoué"));
     }
 
     public void ShowCharacters(ConditionFilter filter = ConditionFilter.None)
