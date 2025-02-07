@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\TestExos\\TestExos.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\Exos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\Exos.csproj",
+        "projectName": "Exos",
+        "projectPath": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\Exos.csproj",
+        "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\TestExos\\TestExos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\TestExos\\TestExos.csproj",
+        "projectName": "TestExos",
+        "projectPath": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\TestExos\\TestExos.csproj",
+        "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\TestExos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\Exos.csproj": {
+                "projectPath": "C:\\Users\\Administrateur\\Desktop\\DEV\\10-TDD\\Exos\\Exos\\Exos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest": {
+              "target": "Package",
+              "version": "[3.7.3, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
