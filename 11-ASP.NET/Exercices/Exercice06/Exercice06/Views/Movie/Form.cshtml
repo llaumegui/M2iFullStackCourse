@@ -1,0 +1,68 @@
+@model Movie
+
+@{
+    string formMode = ViewBag.FormMode;
+
+    ViewData["Title"] = formMode switch
+    {
+        "Create"=>"Ajouter un film",
+        "Edit"=>"Modifier un film",
+        _=>"____"
+    };
+    
+    var btnColorClass = formMode switch
+    {
+        "Edit" => "btn-warning",
+        "Delete" => "btn-danger",
+        "Details" => "btn-secondary",
+        _ => "btn-success"
+    };
+
+    var btnText = formMode switch
+    {
+        "Edit" => "Editer",
+        "Delete" => "Confirmer",
+        "Details" => "Retour",
+        _ => "Ajouter"
+    };
+}
+@*<html>
+<head>
+    <title>Film #@Model.Id</title>
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Année</th>
+        <th>Réalisateur</th>
+        <th>Genre</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@Model.Title</td>
+        <td>@Model.Year</td>
+        <td>@Model.Director</td>
+        <td>@Model.Genre</td>
+    </tr>
+    </tbody>
+</table>
+    <h3>SYNOPSIS:</h3>
+    <p>@Model.Synopsis</p>
+<div class="d-flex">
+    <a class="ms-auto btn btn-secondary" asp-action="List"><span class="bi bi-arrow-counterclockwise"></span> Return to listing</a>
+</div>
+</body>
+</html>*@
+
+<form asp-action="@formMode">
+    <label asp-for="Title" class="form-label"></label>
+    <input asp-for="Title" class="form-control"/>
+    <div class="d-flex">
+        <button class="ms-auto btn @btnColorClass">
+            @btnText
+        </button>
+    </div>
+</form>

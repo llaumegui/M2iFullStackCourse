@@ -6,4 +6,20 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Movie\Form.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Movie\List.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.13">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
 </Project>

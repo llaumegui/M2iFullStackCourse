@@ -1,11 +1,13 @@
+using System.Linq.Expressions;
 namespace Exercice06.Repositories;
 
 public interface IRepository<T> where T : class
 {
     public bool Create(T entity);
     public IEnumerable<T> Read();
+    public IEnumerable<T> Read(Expression<Func<T, bool>> predicate);
     public T Read(int id);
-    public bool Update(T entity);
+    public void Save();
     public bool Delete(T entity);
 }
 
