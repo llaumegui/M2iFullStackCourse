@@ -1,0 +1,1 @@
+<button type="button" onclick="navigator.clipboard.writeText(':bug:')">:bug:</button> - fix bugs

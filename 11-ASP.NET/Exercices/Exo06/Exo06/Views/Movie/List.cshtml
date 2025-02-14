@@ -1,0 +1,77 @@
+@model List<Movie>
+
+@{
+    ViewData["Title"] = "Liste de Films";
+}
+<div class="row">
+    @foreach (var p in Model.Where(m => m is { Favorite: true }))
+    {
+        <div class="col-4">
+            <div class="card">
+                <img src="@p.Picture.Url" class="card-img-top" alt="@p.Title">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Title</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<hr/>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>@Html.DisplayNameForInnerType((Movie m) => m.Id)</th>
+        <th>@Html.DisplayNameForInnerType((Movie m) => m.Title)</th>
+        <th>@Html.DisplayNameForInnerType((Movie m) => m.Year)</th>
+        <th>@Html.DisplayNameForInnerType((Movie m) => m.Director)</th>
+        <th>@Html.DisplayNameForInnerType((Movie m) => m.Genre)</th>
+        <th>Vu ?</th>
+        <th>Favori</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Id</td>
+            <td>@m.Title</td>
+            <td>@m.Year</td>
+            <td>@m.Director</td>
+            <td>@m.Genre</td>
+            <td>
+                <form asp-action="ChangeSeen" asp-route-id="@m.Id">
+                    @if (m.Seen)
+                    {
+                    <button class="btn btn-success ms-auto"></button>
+                    }
+                    else
+                    {
+                    <button class="btn btn-outline-success ms-auto"></button>
+                    }
+                </form>
+            </td>
+            <td>
+                <form asp-action="ChangeFavorite" asp-route-id="@m.Id">                    
+                    @if (m.Favorite)
+                    {
+                        <button class="btn btn-warning ms-auto"></button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-outline-warning ms-auto"></button>
+                    }
+                </form>
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@m.Id" class="btn btn-secondary"><span
+                        class="bi bi-pencil-square"></span> Details</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<hr/>
+<div class="d-flex">
+    <a asp-action="" class="btn btn-success ms-auto"><span class="bi bi-plus-circle"></span> Add</a>
+</div>
