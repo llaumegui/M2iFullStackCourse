@@ -1,0 +1,6 @@
+@ShawarmAPI_HostAddress = http://localhost:5117
+
+GET {{ShawarmAPI_HostAddress}}/shawarmapi/
+Accept: application/json
+
+###

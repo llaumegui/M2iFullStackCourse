@@ -11,11 +11,11 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext (options
     {
         model.Entity<Contact>().HasData(new Contact()
         {
-            Id = -1,
+            Id = Guid.NewGuid(),
             FirstName = "John",
             LastName = "Doe",
             Birthday = new DateTime(2000, 1, 1),
-            Gender = "N"
+            Gender = 'N'
         });
     }
 }

@@ -15,11 +15,10 @@ namespace Exo01.Migrations
                 name: "Contacts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(1)", nullable: false),
                     Birthday = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -32,7 +31,7 @@ namespace Exo01.Migrations
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "Id", "Birthday", "Email", "FirstName", "Gender", "LastName", "Phone" },
-                values: new object[] { -1, new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "John", "N", "Doe", null });
+                values: new object[] { new Guid("6d99308f-9aa5-48c7-8a71-0b4196a122f9"), new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "John", "N", "Doe", null });
         }
 
         /// <inheritdoc />

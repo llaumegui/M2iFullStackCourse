@@ -24,11 +24,9 @@ namespace Exo01.Migrations
 
             modelBuilder.Entity("Exo01.Models.Contact", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
@@ -42,7 +40,7 @@ namespace Exo01.Migrations
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -58,7 +56,7 @@ namespace Exo01.Migrations
                     b.HasData(
                         new
                         {
-                            Id = -1,
+                            Id = new Guid("6d99308f-9aa5-48c7-8a71-0b4196a122f9"),
                             Birthday = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "John",
                             Gender = "N",

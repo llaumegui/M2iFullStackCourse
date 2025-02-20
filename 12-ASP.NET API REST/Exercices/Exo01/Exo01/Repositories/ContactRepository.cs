@@ -1,17 +1,19 @@
 using Exo01.Data;
 using Exo01.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Exo01.Repositories;
 
 public class ContactRepository(ApplicationDbContext db) : IContactRepository
 {
-    public bool Create(Contact contact, out int contactId)
-    {        
-        contactId = db.Add(contact).Entity.Id;
-        return Save();
+    public bool Create(Contact contact, out Guid contactId)
+    {
+        var dbContact = db.Add(contact);
+        contactId = dbContact.Entity.Id;
+        return dbContact.State == EntityState.Added;
     }
     
-    public Contact Get(int id)=>db.Contacts.FirstOrDefault(c=>c.Id == id);
+    public Contact Get(Guid id)=>db.Contacts.FirstOrDefault(c=>c.Id == id);
 
     public IEnumerable<Contact> Get(Func<Contact, bool> predicate)=>db.Contacts.Where(predicate);
 
@@ -19,8 +21,8 @@ public class ContactRepository(ApplicationDbContext db) : IContactRepository
 
     public bool Delete(Contact contact)
     {
-        db.Remove(contact);
-        return Save();
+        var dbContact = db.Remove(contact);
+        return dbContact.State == EntityState.Deleted;
     }
 
     public bool Save() => db.SaveChanges() > 0;

@@ -1,5 +1,4 @@
 using Exo01.Models;
-using Exo01.Repositories;
 using Exo01.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,55 +6,23 @@ namespace Exo01.Controllers;
 
 [ApiController]
 [Route("contacts")]
-public class ContactController(ContactRepository cr) : ControllerBase
+public class ContactController(ContactService cs) : ControllerBase
 {
     [HttpGet]
     public IActionResult Get()
     {
-        var contacts = cr.GetAll();
+        var contacts = cs.GetAll();
         return Ok(new
         {
             Message = "contacts retrieved",
             Contacts = contacts
         });
     }
-
-    [HttpGet("{id}")]
-    public IActionResult Get(int id)
-    {
-        var contact = cr.Get(id);
-        if (contact == null)
-            return NotFound(new 
-            {
-                Message = "contact not found"
-            });
-        return Ok(new
-        {
-            Message = "contact retrieved",
-            Contacts = contact
-        });
-    }
-
-    [HttpGet("name/{lastName}")]
-    public IActionResult Get(string lastName)
-    {
-        var contacts = cr.Get(c=>c.LastName == lastName).ToList();
-        if (!contacts.Any())
-            return NotFound(new 
-            {
-                Message = "contact not found"
-            });
-        return Ok(new
-        {
-            Message = $"contact{(contacts.Count()>1?"s":"")} retrieved",
-            Contacts = contacts
-        });
-    }
-
+    
     [HttpPost]
-    public IActionResult Post(Contact contact)
+    public IActionResult Post(ContactInput contactInput)
     {
-        if(cr.Create(contact, out int contactId))
+        if (cs.Create(contactInput, out Guid contactId))
             return CreatedAtAction(nameof(Get), new { id = contactId }, "contact added");
         return BadRequest(
             new
@@ -63,31 +30,63 @@ public class ContactController(ContactRepository cr) : ControllerBase
                 Message = "Bad Request"
             });
     }
-
-    [HttpPut("{id}")]
-    public IActionResult Put(int id, [FromBody] Contact newContact)
+    
+    [HttpGet("name/{lastName}")]
+    public IActionResult Get(string lastName)
     {
-        var contact = cr.Get(id);
-        
-        if(contact == null)
+        var contacts = cs.Get(c => c.LastName == lastName).ToList();
+        if (!contacts.Any())
             return NotFound(new
             {
                 Message = "contact not found"
             });
-        if(contact.FirstName != newContact.FirstName)
-            contact.FirstName = newContact.FirstName;
-        if(contact.LastName != newContact.LastName)
-            contact.LastName = newContact.LastName;
-        if(contact.Gender != newContact.Gender)
-            contact.Gender = newContact.Gender;
-        if(contact.Birthday != newContact.Birthday)
-            contact.Birthday = newContact.Birthday;
-        if(contact.Email != newContact.Email)
-            contact.Email = newContact.Email;
-        if(contact.Phone != newContact.Phone)
-            contact.Phone = newContact.Phone;
+        return Ok(new
+        {
+            Message = $"contact{(contacts.Count() > 1 ? "s" : "")} retrieved",
+            Contacts = contacts
+        });
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult Get(Guid id)
+    {
+        var contact = cs.Get(id);
+        if (contact == null)
+            return NotFound(new
+            {
+                Message = "contact not found"
+            });
+        return Ok(new
+        {
+            Message = "contact retrieved",
+            Contact = contact
+        });
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult Put(Guid id, [FromBody] ContactInput newContact)
+    {
+        if(!cs.SetWorkItem(id,out _))
+            return NotFound();
         
-        cr.Save();
-        return CreatedAtAction(nameof(Get), new { id = contact.Id }, "contact updated");
+        if (cs.Update(newContact))
+            return CreatedAtAction(nameof(Get), new { id = id }, "contact updated");
+
+        return BadRequest(
+            new
+            {
+                Message = "Bad Request"
+            });
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(Guid id)
+    {
+        if (!cs.SetWorkItem(id, out _))
+            return NotFound();
+        if (cs.Delete())
+            return Ok();
+
+        return BadRequest();
     }
 }
