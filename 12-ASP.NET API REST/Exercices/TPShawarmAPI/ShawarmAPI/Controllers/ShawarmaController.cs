@@ -5,7 +5,7 @@ namespace ShawarmAPI.Controllers;
 
 [ApiController]
 [Route("shawarmas")]
-public class ShawarmaController(IShawarmaService shawarmaService, IIngredientService ingredientService ) : ControllerBase
+public class ShawarmaController(ShawarmaService shawarmaService, IngredientService ingredientService ) : ControllerBase
 {
     
 }

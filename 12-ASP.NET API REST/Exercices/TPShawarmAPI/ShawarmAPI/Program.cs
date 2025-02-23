@@ -27,5 +27,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// TODO RUN ASYNC
-app.Run();
+await app.RunAsync();

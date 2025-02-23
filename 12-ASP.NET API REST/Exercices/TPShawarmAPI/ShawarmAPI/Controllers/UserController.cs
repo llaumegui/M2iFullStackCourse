@@ -9,11 +9,11 @@ namespace ShawarmAPI.Controllers;
 [Route("authentification")]
 public class UserController : ControllerBase
 {
-    private readonly IUserService _userService;
+    private readonly UserService _userService;
     private readonly AppSettings _appSettings;
     private readonly Encryptor _encryptor;
     
-    public UserController(IUserService userService, IOptions<AppSettings> options)
+    public UserController(UserService userService, IOptions<AppSettings> options)
     {
         _userService = userService;
         _appSettings = options.Value;

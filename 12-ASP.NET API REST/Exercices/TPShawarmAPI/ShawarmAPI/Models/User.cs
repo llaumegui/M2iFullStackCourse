@@ -20,10 +20,6 @@ public class User
     [StringLength(20, ErrorMessage = "Le prénom doit faire au maximum 20 caractères.")]
     public string FirstName { get; set; } = string.Empty;
     
-    [Column("password")]
-    [JsonIgnore]
-    public string? Password { get; set; }
-
     [Column("email")]
     [EmailAddress]
     [Required(ErrorMessage = "Le mail est requis.")]
@@ -34,6 +30,16 @@ public class User
     [Required(ErrorMessage = "Le numéro de téléphone est requis.")]
     public string PhoneNumber { get; set; }
     
+    [Column("password")]
+    [JsonIgnore]
+    public string? Password { get; set; }
+    
     [Column("is_admin")]
     public bool IsAdmin { get; set; } = false;
+    
+    [Column("created_at")]
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    
+    [Column("created_by")]
+    public Guid? CreatedBy { get; set; }
 }
