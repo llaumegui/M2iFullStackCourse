@@ -30,7 +30,7 @@ public static class DependencyInjections
 
         builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-        builder.AddAuthentification();
+        builder.AddAuthentication();
     }
 
     private static void AddSwagger(this WebApplicationBuilder builder)
@@ -85,7 +85,7 @@ public static class DependencyInjections
         builder.Services.AddScoped<UserService>();
     }
 
-    private static void AddAuthentification(this WebApplicationBuilder builder)
+    private static void AddAuthentication(this WebApplicationBuilder builder)
     {
         var appsettings = builder.Configuration.GetSection("AppSettings").Get<AppSettings>();
         var key = Encoding.ASCII.GetBytes(appsettings!.SecretKey);

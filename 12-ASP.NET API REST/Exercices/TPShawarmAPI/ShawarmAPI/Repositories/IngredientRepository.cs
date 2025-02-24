@@ -5,31 +5,27 @@ namespace ShawarmAPI.Repositories;
 
 public class IngredientRepository : IRepository<Ingredient,Guid>
 {
-    public Task<Ingredient> Add(Ingredient entity)
+    public async Task<bool> Add(Ingredient entity)
     {
         throw new NotImplementedException();
     }
-    public Task<Ingredient?> GetById(Guid id)
+    public async Task<Ingredient?> GetById(Guid id)
     {
         throw new NotImplementedException();
     }
-    public Task<Ingredient?> Get(Expression<Func<Ingredient, bool>> predicate)
+    public async Task<Ingredient?> Get(Expression<Func<Ingredient, bool>> predicate)
     {
         throw new NotImplementedException();
     }
-    public Task<IEnumerable<Ingredient>> GetAll()
+    public async Task<IEnumerable<Ingredient>> GetAll(Expression<Func<Ingredient, bool>>? predicate)
     {
         throw new NotImplementedException();
     }
-    public Task<IEnumerable<Ingredient>> GetAll(Expression<Func<Ingredient, bool>> predicate)
+    public async Task<Ingredient?> Update(Ingredient entity)
     {
         throw new NotImplementedException();
     }
-    public Task<Ingredient?> Update(Ingredient entity)
-    {
-        throw new NotImplementedException();
-    }
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id)
     {
         throw new NotImplementedException();
     }

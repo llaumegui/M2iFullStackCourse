@@ -1,36 +1,40 @@
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+using ShawarmAPI.Data;
 using ShawarmAPI.Models;
 
 namespace ShawarmAPI.Repositories;
 
-public class UserRepository : IRepository<User, Guid>
+public class UserRepository(ApplicationDbContext dbContext) : IRepository<User, Guid>
 {
-    public Task<User> Add(User entity)
+    public async Task<bool> Add(User entity)
     {
-        throw new NotImplementedException();
+        await dbContext.Users.AddAsync(entity);
+        return await dbContext.SaveChangesAsync() != 0;
+    } 
+
+    public async Task<User?> GetById(Guid id)=>await dbContext.Users.FirstOrDefaultAsync(u=>u.Id == id);
+    public async Task<User?> Get(Expression<Func<User, bool>> predicate)=> await dbContext.Users.FirstOrDefaultAsync(predicate);
+    public async Task<IEnumerable<User>> GetAll(Expression<Func<User, bool>>? predicate)
+    {
+        if (predicate != null) return await dbContext.Users.Where(predicate).ToListAsync();
+        return await dbContext.Users.ToListAsync();
     }
-    public Task<User?> GetById(Guid id)
+
+    public async Task<User?> Update(User entity)
     {
-        throw new NotImplementedException();
+        var user = await GetById(entity.Id);
+        if (user != null)
+            return dbContext.Users.Update(entity).Entity;
+        return null;
     }
-    public Task<User?> Get(Expression<Func<User, bool>> predicate)
+    public async Task<bool> Delete(Guid id)
     {
-        throw new NotImplementedException();
-    }
-    public Task<IEnumerable<User>> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-    public Task<IEnumerable<User>> GetAll(Expression<Func<User, bool>> predicate)
-    {
-        throw new NotImplementedException();
-    }
-    public Task<User?> Update(User entity)
-    {
-        throw new NotImplementedException();
-    }
-    public Task<bool> Delete(Guid id)
-    {
-        throw new NotImplementedException();
+        var user = await GetById(id);
+        if (user is null)
+            return false;
+        
+        dbContext.Users.Remove(user);
+        return await dbContext.SaveChangesAsync()!=0;
     }
 }

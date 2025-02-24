@@ -11,24 +11,16 @@ public class User
     public Guid Id { get; set; }
 
     [Column("last_name")]
-    [Required(ErrorMessage = "Le nom est requis.")]
-    [StringLength(20, ErrorMessage = "Le nom doit faire au maximum 20 caractères.")]
     public string LastName { get; set; } = string.Empty;
 
     [Column("first_name")]
-    [Required(ErrorMessage = "Le prenom est requis.")]
-    [StringLength(20, ErrorMessage = "Le prénom doit faire au maximum 20 caractères.")]
     public string FirstName { get; set; } = string.Empty;
     
     [Column("email")]
-    [EmailAddress]
-    [Required(ErrorMessage = "Le mail est requis.")]
-    public string Email { get; set; }
+    public string? Email { get; set; }
 
     [Column("phone")]
-    [Phone]
-    [Required(ErrorMessage = "Le numéro de téléphone est requis.")]
-    public string PhoneNumber { get; set; }
+    public string? PhoneNumber { get; set; }
     
     [Column("password")]
     [JsonIgnore]
