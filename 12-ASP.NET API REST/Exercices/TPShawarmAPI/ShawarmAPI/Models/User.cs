@@ -8,6 +8,7 @@ namespace ShawarmAPI.Models;
 public class User
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [Column("id")]
     public Guid Id { get; set; }
 
     [Column("last_name")]

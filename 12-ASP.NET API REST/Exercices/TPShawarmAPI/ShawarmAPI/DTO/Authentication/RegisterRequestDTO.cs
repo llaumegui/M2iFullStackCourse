@@ -7,7 +7,7 @@ namespace ShawarmAPI.DTO.Authentification;
 
 public class RegisterRequestDTO
 {
-    [Required(ErrorMessage = "Last name est requis")]
+    [Required(ErrorMessage = "Last name is required")]
     [StringLength(20, ErrorMessage = "Le nom doit faire au maximum 20 caractères.")]
     public string LastName { get; set; } = string.Empty;
 
@@ -29,5 +29,5 @@ public class RegisterRequestDTO
     
     [DataType(DataType.Password)]
     [PasswordValidator]
-    public string? Password { get; set; }
+    public string Password { get; set; }
 }

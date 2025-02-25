@@ -26,8 +26,6 @@ public static class DependencyInjections
 
         builder.AddServices();
 
-        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
         builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
         builder.AddAuthentication();
@@ -71,7 +69,7 @@ public static class DependencyInjections
 
     private static void AddRepositories(this WebApplicationBuilder builder)
     {
-        builder.Services.AddScoped<IngredientRepository>();
+        builder.Services.AddScoped<ToppingRepository>();
         builder.Services.AddScoped<ShawarmaRepository>();
         builder.Services.AddScoped<UserRepository>();
     }
@@ -80,7 +78,7 @@ public static class DependencyInjections
     {
         builder.Services.AddHostedService<FirstRunService>();
 
-        builder.Services.AddScoped<IngredientService>();
+        builder.Services.AddScoped<ToppingService>();
         builder.Services.AddScoped<ShawarmaService>();
         builder.Services.AddScoped<UserService>();
     }

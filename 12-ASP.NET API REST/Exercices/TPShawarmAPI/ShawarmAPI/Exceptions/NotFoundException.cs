@@ -1,6 +1,0 @@
-namespace ShawarmAPI.Exceptions;
-
-public class NotFoundException(string? message) : Exception(message)
-{
-    
-}

@@ -34,7 +34,7 @@ public class FirstRunService(IServiceScopeFactory scopeFactory) : IHostedService
             await dbContext.Users.AddAsync(user, cancellationToken);
             if (await dbContext.SaveChangesAsync(cancellationToken) <= 0)
             {
-                throw new Exception("Root Admin could not be created");
+                throw new InvalidOperationException("Root Admin could not be created");
             }
         }
     }

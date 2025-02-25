@@ -1,32 +1,43 @@
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+using ShawarmAPI.Data;
 using ShawarmAPI.Models;
 
 namespace ShawarmAPI.Repositories;
 
-public class ShawarmaRepository : IRepository<Shawarma,Guid> {
+public class ShawarmaRepository(ApplicationDbContext dbContext) : IRepository<Shawarma,string> {
     
     public async Task<bool> Add(Shawarma entity)
     {
-        throw new NotImplementedException();
+        await dbContext.Shawarmas.AddAsync(entity);
+        return await Save();
     }
-    public async Task<Shawarma?> GetById(Guid id)
-    {
-        throw new NotImplementedException();
-    }
+    
+    public async Task<Shawarma?> GetByKey(string key)=> await dbContext.Shawarmas.FirstOrDefaultAsync(x => x.Name == key);
+
     public async Task<Shawarma?> Get(Expression<Func<Shawarma, bool>> predicate)
-    {
-        throw new NotImplementedException();
-    }
+        => await dbContext.Shawarmas.FirstOrDefaultAsync(predicate);
+    
     public async Task<IEnumerable<Shawarma>> GetAll(Expression<Func<Shawarma, bool>>? predicate)
     {
-        throw new NotImplementedException();
+        if (predicate != null) return await Task.Run(() => dbContext.Shawarmas.Where(predicate));
+        return await Task.Run(() => dbContext.Shawarmas);
     }
-    public async Task<Shawarma?> Update(Shawarma entity)
+    
+    public async Task<bool> Update(Shawarma entity)
     {
-        throw new NotImplementedException();
+        var shawarma = await GetByKey(entity.Name);
+        if (shawarma != null)
+            return await Save();
+        return false;
     }
-    public async Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(string key)
     {
-        throw new NotImplementedException();
+        var shawarma = await GetByKey(key);
+        if (shawarma != null)
+            await Task.Run(()=> dbContext.Remove(shawarma));
+        return await Save();
     }
+
+    public async Task<bool> Save()=> await dbContext.SaveChangesAsync() != 0;
 }

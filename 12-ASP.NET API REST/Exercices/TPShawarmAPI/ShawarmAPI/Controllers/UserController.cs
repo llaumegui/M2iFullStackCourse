@@ -13,6 +13,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace ShawarmAPI.Controllers;
 
 [ApiController]
+[Route("auth")]
 public class UserController : ControllerBase
 {
     private readonly UserService _userService;
@@ -49,7 +50,6 @@ public class UserController : ControllerBase
             createdBy = userId;
         }
 
-        // Créer un nouvel utilisateur
         var user = new User
         {
             FirstName = register.FirstName,
