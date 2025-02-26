@@ -1,0 +1,64 @@
+<svg>
+    @if (ShowMan > 0)
+    {
+        <line x1="80" y1="250" x2="200" y2="250" stroke="black" stroke-width="4"></line>
+    }
+    @if (ShowMan > 1)
+    {
+        <line x1="100" y1="250" x2="100" y2="20" stroke="black" stroke-width="4"></line>
+    }
+    @if (ShowMan > 2)
+    {
+        <line x1="100" y1="20" x2="200" y2="20" stroke="black" stroke-width="4"></line>
+    }
+    @if (ShowMan > 3)
+    {
+        <line x1="100" y1="50" x2="130" y2="20" stroke="black" stroke-width="4"></line>
+    }
+    @if (ShowMan > 4)
+    {
+        <line x1="200" y1="20" x2="200" y2="60" stroke="black" stroke-width="4"></line>
+    }
+    <g id="body" stroke="black" stroke-width="4">
+        @if (ShowMan > 5)
+        {
+            <g id="head">
+                <circle cx="200" cy="80" r="20" fill="white"></circle>
+                <g id="rEyes">
+                    <circle cx="193" cy="80" r="4"></circle>
+                    <circle cx="207" cy="80" r="4"></circle>
+                </g>
+                <g id="xEyes" class="hide">
+                    <line x1="190" y1="78" x2="196" y2="84"></line>
+                    <line x1="204" y1="78" x2="210" y2="84"></line>
+                    <line x1="190" y1="84" x2="196" y2="78"></line>
+                    <line x1="204" y1="84" x2="210" y2="78"></line>
+                </g>
+            </g>
+        }
+        @if (ShowMan > 6)
+        {
+            <line x1="200" y1="100" x2="200" y2="150"></line>
+        }
+        @if (ShowMan > 7)
+        {
+            <line id="armL" x1="200" y1="120" x2="170" y2="140"></line>
+        }
+        @if (ShowMan > 8)
+        {
+            <line id="armR" x1="200" y1="120" x2="230" y2="140"></line>
+        }
+        @if (ShowMan > 9)
+        {
+            <line id="legL" x1="200" y1="150" x2="180" y2="190"></line>
+        }
+        @if (ShowMan > 10)
+        {
+            <line id="legR" x1="200" y1="150" x2="220" y2="190"></line>
+        }
+    </g>
+</svg>
+
+@code {
+    [Parameter] public int? ShowMan { get; set; }
+}

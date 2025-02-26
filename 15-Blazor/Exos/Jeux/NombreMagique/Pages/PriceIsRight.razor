@@ -1,0 +1,12 @@
+@page "/price-is-right"
+
+<PageTitle>PriceIsRight</PageTitle>
+<h1>Price Is Right</h1>
+<p>Trouver le bon nombre situé entre @Minimum et @Maximum</p>
+
+<p>@((MarkupString)@TriesText)</p>
+
+<input type="number" @bind="TestValue"/>
+<button class="btn btn-primary" @onclick="ValidateTry">Submit</button>
+
+<p role="status">@Message</p>

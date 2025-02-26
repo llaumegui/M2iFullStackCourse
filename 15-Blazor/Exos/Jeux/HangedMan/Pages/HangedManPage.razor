@@ -1,0 +1,39 @@
+@page "/hanged-man"
+
+<h2>HangedMan</h2>
+<p>Trouvez le mot caché</p>
+
+<HangedDrawing ShowMan="HangedTries"></HangedDrawing>
+<hr/>
+<div class="row align-content-center justify-content-center">
+    @for(char letter ='a'; letter <= 'z'; letter++)
+    {
+        char testLetter = letter;
+        if (!_triedKeys.Contains(letter))
+        {
+            <button class="btn btn-info col-1 m-1" @onclick="() => TryLetter(testLetter)">@testLetter.ToString().ToUpper()</button>
+        }
+    }
+</div>
+<div>
+    @{
+        string usedLetters = "";
+        foreach (var letter in _triedKeys)
+        {
+            usedLetters += letter + " ";
+        }
+        <p>Lettres utilisées:</p>
+        <p>@usedLetters</p>
+    }
+</div>
+
+<h3>@WordDisplay</h3>
+
+<h2>@EndMessage</h2>
+
+<h1>cheat: @_wordToFind</h1>
+
+@if (End)
+{
+    <button class="btn btn-primary "@onclick="OnInitialized">Rejouer ?</button>
+}
