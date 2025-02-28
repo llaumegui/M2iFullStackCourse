@@ -1,0 +1,48 @@
+button{
+    border-radius: 10px;
+}
+p, pre{
+    text-align: right;
+    margin: 10px;
+    font-size: 20px;
+}
+#calculator{
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 540px;
+}
+
+#screen{
+    background-color: lightgray;
+    margin-left: 33%;
+    margin-right: 5%;
+    border-radius: 5px;
+    display: block;
+    height: 100px;
+}
+
+#screenText{
+    height: 200px;
+}
+.buttonContainer{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr;
+    row-gap: 5%;
+    column-gap: 5%;
+    padding: 5%;
+    height: 100%;
+}
+
+.buttons{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+#equal{
+grid-column: 3/5;
+color: white;
+background-color: rgb(49, 49, 49);
+}
