@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Durée</th>
+                <th>Prix</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>&lt;= 15min</p>
+                </td>
+                <td>
+                    <p>0.80€</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>15min &lt;Durée &lt;= 30min</p>
+                </td>
+                <td>
+                    <p>1.30€</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>30min &lt; Durée &lt;= 45min</p>
+                </td>
+                <td>
+                    <p>1.70€</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>&gt; 45min</p>
+                </td>
+                <td>
+                    <p>6€</p>
+                </td>
+            </tr>
+        </table>
+        <div class="parking">
+            <h2>Parking 3000</h2>
+            <p class="output"></p>
+            <div>
+                <input class="matricleInput" placeholder="Saisir votre immatriculation">
+                <button class="ticketButton">Récupérer ticket</button>
+            </div>
+            <div>
+                <button class="payButton"></button>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="./modules/script.js"></script>
+</html>

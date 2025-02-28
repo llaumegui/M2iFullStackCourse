@@ -7,7 +7,6 @@ let nbr = document.querySelector(".inputNbr");
 
 window.onload = setup();
 
-
 document.addEventListener("keydown", (event) => {
     if (event.key == "Enter"){
         alert("keydown");
