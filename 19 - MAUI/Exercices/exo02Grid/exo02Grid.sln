@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exo02Grid", "exo02Grid.csproj", "{B94CA0D1-2008-4C23-92DB-78C023EAA24B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B94CA0D1-2008-4C23-92DB-78C023EAA24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94CA0D1-2008-4C23-92DB-78C023EAA24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94CA0D1-2008-4C23-92DB-78C023EAA24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94CA0D1-2008-4C23-92DB-78C023EAA24B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

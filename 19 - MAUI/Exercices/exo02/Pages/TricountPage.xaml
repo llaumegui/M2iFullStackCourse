@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="exo02.Pages.TricountPage"
+             BackgroundColor="#323232">
+    <Frame BorderColor="Transparent" BackgroundColor="Transparent" Margin="20">
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Frame BackgroundColor="#484848" BorderColor="Transparent" >
+                <VerticalStackLayout>
+                    <Label TextColor="Aqua"
+                           Text="TOTAL P/PERSON"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <FlexLayout JustifyContent="SpaceBetween">
+                        <Label x:Name="_totalppLabel"
+                               TextColor="LightGray"
+                               FontSize="32"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                        <Rectangle HeightRequest="100"
+                                   WidthRequest="2"
+                                   BackgroundColor="LightGray"
+                                   RadiusX="1"
+                                   RadiusY="1"
+                                   Margin="10" />
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="SUBTOTAL"
+                                   HorizontalOptions="Start"
+                                   TextColor="LightGray" />
+                            <Label x:Name="_subtotalLabel"
+                                   HorizontalOptions="Center"
+                                   TextColor="LightGray"
+                                   FontAttributes="Bold" />
+                            <Label Text="TIP"
+                                   HorizontalOptions="Start"
+                                   TextColor="LightGray"
+                                   Margin="0,10,0,0" />
+                            <Label x:Name="_tipLabel"
+                                   HorizontalOptions="Start"
+                                   TextColor="LightGray"
+                                   FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </Frame>
+            <HorizontalStackLayout>
+                <Label Text="Enter your bill ($): "
+                       TextColor="LightGray"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start" />
+                <Entry x:Name="_billEntry"
+                       Keyboard="Numeric"
+                       TextColor="LightGray"
+                       Completed="BillEntry_OnCompleted"
+                       BackgroundColor="#484848"
+                       Text="0" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Padding="5">
+                <Label Text="Choose your tip (%):"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       TextColor="LightGray" />
+                <Button Pressed="Tip10Button_OnPressed"
+                        Text="10%"
+                        TextColor="LightGray"
+                        BackgroundColor="Indigo" />
+                <Button Pressed="Tip15Button_OnPressed"
+                        Text="15%"
+                        TextColor="LightGray"
+                        BackgroundColor="Indigo" />
+                <Button Pressed="Tip20Button_OnPressed"
+                        Text="20%"
+                        TextColor="LightGray"
+                        BackgroundColor="Indigo" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label x:Name="_tipPercentLabel"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       TextColor="LightGray" />
+                <Slider x:Name="_tipSlider"
+                        Minimum="0"
+                        Maximum="100"
+                        ValueChanged="TipSlider_OnValueChanged" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Split the total:"
+                       TextColor="LightGray"
+                       VerticalOptions="Center" />
+                <Button Pressed="SplitMinus_OnPressed"
+                        Text="+"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        TextColor="LightGray"
+                        BackgroundColor="Indigo"
+                        HeightRequest="50"
+                        WidthRequest="25" />
+                <Frame BackgroundColor="#484848"
+                       BorderColor="Transparent"
+                       Padding="10,0">
+                    <Label x:Name="_splittersLabel"
+                           TextColor="LightGray" />
+                </Frame>
+                <Button Pressed="SplitPlus_OnPressed"
+                        Text="+"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        TextColor="LightGray"
+                        BackgroundColor="Indigo"
+                        HeightRequest="50"
+                        WidthRequest="25" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>
