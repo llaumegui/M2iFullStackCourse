@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorMaker.Pages.ColorMakerPage"
+             x:Name="_page">
+    <Frame Margin="20" VerticalOptions="Center">
+        <VerticalStackLayout>
+            <Label HorizontalOptions="Center"
+                   FontSize="32"
+                   FontAutoScalingEnabled="True"
+                   FontAttributes="Bold"
+                   TextColor="Black">Color Maker</Label>
+            <Label HorizontalOptions="Start"
+                   FontSize="24"
+                   Text="(R): "
+                   TextColor="Black" />
+            <Slider x:Name="_sliderR"
+                    Minimum="0"
+                    Maximum="1"
+                    Value="0.5"
+                    ThumbColor="DarkRed"
+                    MinimumTrackColor="Red"
+                    MaximumTrackColor="LightCoral"
+                    ValueChanged="sliderR_ValueChanged" />
+            <Label HorizontalOptions="Start"
+                   FontSize="24"
+                   Text="(G): "
+                   TextColor="Black" />
+            <Slider x:Name="_sliderG"
+                    Minimum="0"
+                    Maximum="1"
+                    Value="0.5"
+                    ThumbColor="DarkGreen"
+                    MinimumTrackColor="Green"
+                    MaximumTrackColor="LightGreen"
+                    ValueChanged="sliderG_ValueChanged" />
+            <Label HorizontalOptions="Start"
+                   FontSize="24" Text="(B): "
+                   TextColor="Black" />
+            <Slider x:Name="_sliderB"
+                    Minimum="0"
+                    Maximum="1"
+                    Value="0.5"
+                    ThumbColor="DarkBlue"
+                    MinimumTrackColor="Blue"
+                    MaximumTrackColor="LightBlue"
+                    ValueChanged="sliderB_ValueChanged" />
+            <Frame BackgroundColor="Transparent"
+                   HorizontalOptions="Center"
+                   Margin="20,10"
+                   BorderColor="Gray"
+                   CornerRadius="10">
+                <VerticalStackLayout>
+                    <Label Text="HEX VALUE: " HorizontalOptions="Center"/>
+                    <HorizontalStackLayout>
+                        <Label x:Name="_hexColor" />
+                        <Frame x:Name="_color"
+                               HeightRequest="10"
+                               WidthRequest="10"
+                               Margin="10,0"
+                               CornerRadius="0"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+            <Button Text="Generate Random Color"
+                    BackgroundColor="#fa5c5c"
+                    TextColor="AntiqueWhite"
+                    Margin="25,10"
+                    Pressed="OnRandomColorButtonClicked" />
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>
