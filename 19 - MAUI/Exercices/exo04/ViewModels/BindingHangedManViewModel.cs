@@ -6,7 +6,5 @@ public class BindingHangedManViewModel
 {
     public int ErrorCount = 0;
     public string HangmanPath => $"hangman_0{ErrorCount + 1}.png";
-    public HashSet<char> Characters { get; set; } = "AZERTYUIOPQSDFGHJKLMWXCVBN".ToHashSet();
-
-
+    public string Letters = "AZERTYUIOPQSDFGHJKLMWXCVBN";
 }

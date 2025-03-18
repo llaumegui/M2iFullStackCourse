@@ -5,44 +5,29 @@
              x:Class="exo04.MainPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#EFE7DC">
-    <ScrollView>
+    <Grid HorizontalOptions="Center" Padding="5" RowDefinitions="2*, 6*, 3*, 8*" RowSpacing="10">
+        <VerticalStackLayout Grid.Row="0">
+            <Label FontSize="30" Text="Hangman Game" HorizontalTextAlignment="Center" />
+            <Label FontSize="18" Text="Errors: 0/7" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+        
+        <Image Grid.Row="1" Source="{Binding HangmanPath}" />
+        
+        <VerticalStackLayout Grid.Row="2">
+            <Label Text="You lost!" FontSize="20" HorizontalTextAlignment="Center" />
+            <Button Text="Retry?" FontSize="24" Margin="0, 10, 0, 0" HorizontalOptions="Center"
+                    BackgroundColor="OrangeRed" FontAttributes="Bold" />
+        </VerticalStackLayout>
 
-        <Grid RowDefinitions="9*,*" Margin="10">
-            <VerticalStackLayout>
-                <Label Text="Hangman Game"
-                       HorizontalOptions="Center" />
-                <Label x:Name="LabelErrors"
-                       Text="Errors:0/7"
-                       HorizontalOptions="Center" />
-                <Image
-                    Source="{Binding HangmanPath}"
-                    HeightRequest="300"
-                    Aspect="AspectFit"
-                    HorizontalOptions="Center" />
-                <Label x:Name="LabelWord"
-                       Text="-----"
-                       FontSize="40"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            </VerticalStackLayout>
-            <CollectionView ItemsSource="{Binding Characters}"
-                            HorizontalOptions="Center"
-                            VerticalOptions="End">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical"
-                                     Span="10"
-                                     HorizontalItemSpacing="3"
-                                     VerticalItemSpacing="3" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Button Text="{x:Binding}"
-                                HorizontalOptions="Center"
-                                WidthRequest="40"
-                                HeightRequest="40" />
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </Grid>
-    </ScrollView>
+        <FlexLayout Grid.Row="3" BindableLayout.ItemsSource="{Binding Letters}" Wrap="Wrap"
+                    JustifyContent="SpaceEvenly">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button x:Name="btnLetter" Text="{Binding .}" HeightRequest="50" WidthRequest="50"
+                            BackgroundColor="OrangeRed" FontAttributes="Bold" Clicked="btnLetter_Clicked" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+
+    </Grid>
 </ContentPage>
