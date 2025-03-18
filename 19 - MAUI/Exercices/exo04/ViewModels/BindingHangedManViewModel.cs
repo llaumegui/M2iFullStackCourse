@@ -1,10 +1,12 @@
+using System.Collections.Specialized;
+
 namespace exo04.ViewModels;
 
 public class BindingHangedManViewModel
 {
-    public int ErrorCount;
+    public int ErrorCount = 0;
     public string HangmanPath => $"hangman_0{ErrorCount + 1}.png";
-    public string Keys = "AZERTYUIOPQSDFGHJKLMWXCVBN";
-    
-    
+    public HashSet<char> Characters { get; set; } = "AZERTYUIOPQSDFGHJKLMWXCVBN".ToHashSet();
+
+
 }

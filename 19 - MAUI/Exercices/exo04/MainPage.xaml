@@ -3,28 +3,46 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="exo04.MainPage"
-             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="#EFE7DC">
-    <VerticalStackLayout>
-        <Label Text="Hangman Game"
-               HorizontalOptions="Center" />
-        <Label x:Name="LabelErrors"
-               Text="Errors:0/7" />
-        <Image
-            Source="{Binding HangmanPath}"
-            HeightRequest="185"
-            Aspect="AspectFit"
-            HorizontalOptions="Center" />
-        <Label x:Name="LabelWord" />
-        <CollectionView ItemsSource="{Binding Keys}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="">
-                    <Frame Padding="5" CornerRadius="10" BorderColor="Transparent" Margin="10">
-                        <Button Text="{Binding}" />
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+    <ScrollView>
 
-    </VerticalStackLayout>
+        <Grid RowDefinitions="9*,*" Margin="10">
+            <VerticalStackLayout>
+                <Label Text="Hangman Game"
+                       HorizontalOptions="Center" />
+                <Label x:Name="LabelErrors"
+                       Text="Errors:0/7"
+                       HorizontalOptions="Center" />
+                <Image
+                    Source="{Binding HangmanPath}"
+                    HeightRequest="300"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center" />
+                <Label x:Name="LabelWord"
+                       Text="-----"
+                       FontSize="40"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </VerticalStackLayout>
+            <CollectionView ItemsSource="{Binding Characters}"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="10"
+                                     HorizontalItemSpacing="3"
+                                     VerticalItemSpacing="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{x:Binding}"
+                                HorizontalOptions="Center"
+                                WidthRequest="40"
+                                HeightRequest="40" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
 </ContentPage>
