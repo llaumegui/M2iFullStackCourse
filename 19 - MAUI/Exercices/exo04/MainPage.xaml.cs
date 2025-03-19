@@ -5,6 +5,8 @@ namespace exo04;
 public partial class MainPage : ContentPage
 {
     HashSet<string> _wordSet = new();
+    private string _wordToFind;
+    private int ErrorCount;
     
     public MainPage()
     {
@@ -16,6 +18,15 @@ public partial class MainPage : ContentPage
     {
         base.OnAppearing();
         await LoadWords();
+
+        NewGame();
+    }
+
+    private void NewGame()
+    {
+        Random rnd = new();
+        _wordToFind = _wordSet.ElementAt(rnd.Next(_wordSet.Count));
+        WordLabel.Text = new string('-', _wordToFind.Length);
     }
 
     private async Task LoadWords()
@@ -25,7 +36,6 @@ public partial class MainPage : ContentPage
         
         while (reader.Peek() >= 0)
         {
-            // Pour chaque ligne, on va ajouter le texte à notre Set de chaines de caractères
             var lineToAdd = await reader.ReadLineAsync();
             if (!String.IsNullOrEmpty(lineToAdd)) _wordSet.Add(lineToAdd);
         }
@@ -36,5 +46,23 @@ public partial class MainPage : ContentPage
         var button = sender as Button;
         if (button == null) return;
         var letter = button.Text;
+
+        if (_wordToFind.Contains(letter))
+        {
+            string updated = "";
+            for (int i = 0; i < _wordToFind.Length; i++)
+                updated += _wordToFind[i] == letter[0] ? _wordToFind[i] : WordLabel.Text[i];
+            WordLabel.Text = updated;
+        }
+        else
+            ErrorCount++;
+        
+        CheckEnd();
+    }
+
+    private void CheckEnd()
+    {
+        if(ErrorCount >=7)
+            return;
     }
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             x:Class="weather.Pages.WeatherForecastPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#000022">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,4*,2*" Margin="20">
+            <VerticalStackLayout Grid.Row="0">
+                <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       HeightRequest="50"
+                       Padding="5">
+                    <Grid ColumnDefinitions="*,300,*">
+                        <ImageButton Source="search.png"
+                                     HeightRequest="10"
+                                     WidthRequest="10"
+                                     Pressed="SearchButton_OnPressed"
+                                     Grid.Column="0" />
+                        <Entry x:Name="CityEntry" 
+                            Text="Lille"
+                               HorizontalTextAlignment="Start"
+                               Completed="Entry_OnCompleted"
+                               Grid.Column="1" />
+                        <ImageButton Source="close.png"
+                                     HeightRequest="10"
+                                     WidthRequest="10"
+                                     Pressed="DeleteButton_OnPressed"
+                                     Grid.Column="2" />
+                    </Grid>
+                </Frame>
+                <Label x:Name="CityLabel"
+                       Text="Lille"
+                       HorizontalOptions="Center"
+                       Margin="10" 
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontSize="24"/>
+                <Label x:Name="DateLabel"
+                       Text="3/19/2025 11:14:58AM"
+                       HorizontalOptions="Center"
+                       Margin="10"
+                       TextColor="White"/>
+            </VerticalStackLayout>
+            <Grid RowDefinitions="5*,*" Grid.Row="1">
+                <controls:SKLottieView Grid.Row="0"
+                                       Source="sunny.json"
+                                       HeightRequest="350"
+                                       WidthRequest="350" />
+                <Grid Grid.Row="1"
+                      RowDefinitions="*,*"
+                      ColumnDefinitions="*,*,*">
+                    <Label Text="Temp"
+                           Grid.Row="0" Grid.Column="0"
+                           HorizontalOptions="Center" 
+                           TextColor="White"/>
+                    <Label Text="Wind"
+                           Grid.Row="0" Grid.Column="1"
+                           HorizontalOptions="Center"
+                           TextColor="White" />
+                    <Label Text="Weather"
+                           Grid.Row="0" Grid.Column="2"
+                           HorizontalOptions="Center"
+                           TextColor="White" />
+                    <Label x:Name="TemperatureLabel"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Text="14.6°C"
+                           HorizontalOptions="Center" 
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                    <Label x:Name="WindLabel"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           Text="10.1Km/h"
+                           HorizontalOptions="Center" 
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                    <Label x:Name="WeatherLabel"
+                           Grid.Row="1"
+                           Grid.Column="2"
+                           Text="Clear Sky"
+                           HorizontalOptions="Center" 
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </Grid>
+            </Grid>
+            <ScrollView FlowDirection="LeftToRight" Grid.Row="2">
+                <HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
