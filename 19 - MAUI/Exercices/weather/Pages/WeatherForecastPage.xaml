@@ -19,8 +19,8 @@
                                      WidthRequest="10"
                                      Pressed="SearchButton_OnPressed"
                                      Grid.Column="0" />
-                        <Entry x:Name="CityEntry" 
-                            Text="Lille"
+                        <Entry x:Name="CityEntry"
+                               Text="Lille"
                                HorizontalTextAlignment="Start"
                                Completed="Entry_OnCompleted"
                                Grid.Column="1" />
@@ -34,28 +34,30 @@
                 <Label x:Name="CityLabel"
                        Text="Lille"
                        HorizontalOptions="Center"
-                       Margin="10" 
+                       Margin="10"
                        FontAttributes="Bold"
                        TextColor="White"
-                       FontSize="24"/>
+                       FontSize="24" />
                 <Label x:Name="DateLabel"
                        Text="3/19/2025 11:14:58AM"
                        HorizontalOptions="Center"
                        Margin="10"
-                       TextColor="White"/>
+                       TextColor="White" />
             </VerticalStackLayout>
             <Grid RowDefinitions="5*,*" Grid.Row="1">
-                <controls:SKLottieView Grid.Row="0"
-                                       Source="sunny.json"
+                <controls:SKLottieView x:Name="WeatherImage"
+                                       Source="sunglasses.json"
+                                       Grid.Row="0"
                                        HeightRequest="350"
-                                       WidthRequest="350" />
+                                       WidthRequest="350" 
+                                       RepeatCount="-1"/>
                 <Grid Grid.Row="1"
                       RowDefinitions="*,*"
                       ColumnDefinitions="*,*,*">
                     <Label Text="Temp"
                            Grid.Row="0" Grid.Column="0"
-                           HorizontalOptions="Center" 
-                           TextColor="White"/>
+                           HorizontalOptions="Center"
+                           TextColor="White" />
                     <Label Text="Wind"
                            Grid.Row="0" Grid.Column="1"
                            HorizontalOptions="Center"
@@ -68,23 +70,23 @@
                            Grid.Row="1"
                            Grid.Column="0"
                            Text="14.6°C"
-                           HorizontalOptions="Center" 
+                           HorizontalOptions="Center"
                            FontAttributes="Bold"
-                           TextColor="White"/>
+                           TextColor="White" />
                     <Label x:Name="WindLabel"
                            Grid.Row="1"
                            Grid.Column="1"
                            Text="10.1Km/h"
-                           HorizontalOptions="Center" 
+                           HorizontalOptions="Center"
                            FontAttributes="Bold"
-                           TextColor="White"/>
+                           TextColor="White" />
                     <Label x:Name="WeatherLabel"
                            Grid.Row="1"
                            Grid.Column="2"
                            Text="Clear Sky"
-                           HorizontalOptions="Center" 
+                           HorizontalOptions="Center"
                            FontAttributes="Bold"
-                           TextColor="White"/>
+                           TextColor="White" />
                 </Grid>
             </Grid>
             <ScrollView FlowDirection="LeftToRight" Grid.Row="2">

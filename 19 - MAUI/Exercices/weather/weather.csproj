@@ -49,7 +49,7 @@
         <MauiAsset Include="Resources\Raw\snowsunny.json" />
         <MauiAsset Include="Resources\Raw\storm.json" />
         <MauiAsset Include="Resources\Raw\stormshowersday.json" />
-        <MauiImage Include="Resources\Raw\sunny.json" />
+        <MauiAsset Include="Resources\Raw\sunny.json" />
         <MauiAsset Include="Resources\Raw\thunder.json" />
         <MauiAsset Include="Resources\Raw\windy.json" />
 
