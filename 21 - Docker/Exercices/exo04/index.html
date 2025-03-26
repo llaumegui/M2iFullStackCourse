@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-fr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" lang="en" content="Developing cool games, the G in Guillaume stands for GAMING !">
+  <meta name="description" lang="fr" content="Developpement de jeux sympathiques, le G de Guillaume veut dire GAMING !">
+  <meta name="keywords" content="Guillaume Lefebvre, llaumegui, Gévaudan">
+  <title>llaumegui.dev</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/shapes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Staatliches&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="assets/logo.ico">
+  <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+  <div class="top-rectangle bigRect"></div>
+  <div class="top-rectangle smallRect"></div>
+  <div class="top-logos">
+    <img src="https://ik.imagekit.io/llaumegui/Images%20Web/logo.png?updatedAt=1693314214052"
+      class="profile-logo filter-gold" alt="logo">
+    <img src="https://ik.imagekit.io/llaumegui/Images%20Web/logo.png?updatedAt=1693314214052"
+      class="profile-logo dropShadow" alt="logo dropShadow">
+  </div>
+  <div class="top-params">
+    <div id="container-languages">
+      <button class="btn active" onclick="localize('en')">
+        <p>EN</p>
+      </button>
+      <button class="btn" onclick="localize('fr')">
+        <p>FR</p>
+      </button>
+    </div>
+    <button class="btn btn-icon" onclick="toggleMode()">
+      <img class="theme-icon filter-white hide" src="assets/sun.svg">
+      <img class="theme-icon filter-white" src="assets/moon-and-stars.svg"></button>
+  </div>
+  <!-- PROFILE -->
+  <div class="profile">
+    <p></p>
+    <p class="name"><b>GUILLAUME LEFEBVRE</b></p>
+    <p class="link-title">Mail :</p>
+    <div class="link">
+      <mark title="Copy to Clipboard"
+        onclick="copyText('guillaume.lfbvre@gmail.com');">&nbsp;guillaume.lfbvre@gmail.com&nbsp;</mark>
+      <p class="tooltip" lang="en">Copied to Clipboard</p>
+      <p class="tooltip" lang="fr">Copié dans le Presse-papiers</p>
+    </div>
+    <p class="link-title" lang="en">Games :</p>
+    <p class="link-title" lang="fr">Jeux :</p>
+    <div class="link">
+      <a href="https://llaumegui.itch.io" target="_blank">&nbsp;Itch.io&nbsp;</a>
+    </div>
+    <p class="link-title" lang="en">Social :</p>
+    <p class="link-title" lang="fr">Réseaux :</p>
+    <div class="link">
+      <a href="https://github.com/llaumegui" target="_blank">&nbsp;Github&nbsp;</a>
+      &#183; <a href="https://twitter.com/glfbvr" target="_blank">&nbsp;Twitter&nbsp;</a>
+      &#183; <a href="https://www.linkedin.com/in/guillaume-lfbvr/" target="_blank">&nbsp;LinkedIn&nbsp;</a>
+    </div>
+    <p class="link-title">CV / Resume :</p>
+    <div class="link">
+      <a href="assets/Resume GuillaumeLefebvre.pdf" target="_blank">&nbsp;EN&nbsp;</a>
+      &#183; <a href="assets/CV GuillaumeLefebvre.pdf" target="_blank">&nbsp;FR&nbsp;</a>
+    </div>
+  </div>
+  <!-- PROJECT BUTTONS -->
+  <div id="container-projects" class="container-center">
+    <button class="btn active" onclick="filterSelection('all')">
+      <p lang="en">Every Projects</p>
+      <p lang="fr">Tous les Projets</p>
+    </button>
+    <button class="btn" onclick="filterSelection('Big')">
+      <p lang="en">Projects</p>
+      <p lang="fr">Projets</p>
+    </button>
+    <button class="btn" onclick="filterSelection('Small')">Jams / Prototypes</button>
+  </div>
+  <!-- Raycast Prototype -->
+  <div class="project-cell Small">
+    <!-- <hr class="separator first-Small"> Uncomment if not the first small-->
+    <div class="project-content">
+      <p class="project-date">2023</p>
+      <div class="project-info">
+        <p class="project-title">Raycast Prototype</p>
+        <p class="project-desc" lang="en"> <i>Wolfenstein-3D like Raycasting Engine</i><br>
+          Learning the basics of <mark>&nbsp;Engine Programming&nbsp;</mark> by making a Raycasting prototype using
+          <mark>&nbsp;C&nbsp;</mark>
+          and <mark>&nbsp;SDL&nbsp;</mark>
+          <br>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Moteur inspiré de Wolfenstein-3D</i><br>
+          Apprendre les bases de la <mark>&nbsp;Programmation Moteur&nbsp;</mark> en utilisant le Raycasting. Réalisé
+          en <mark>&nbsp;C&nbsp;</mark>
+          avec <mark>&nbsp;SDL&nbsp;</mark>
+        <div class="project-imgs">
+          <img class="project-preview"
+            src="https://ik.imagekit.io/llaumegui/Images%20Web/raycast.jpg?updatedAt=1695733123740" alt="Game Title">
+          <img class="project-preview"
+            src="https://ik.imagekit.io/llaumegui/Gifs%20Web/Raycasting.gif?updatedAt=1695732886118" alt="Game Preview">
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Engine Programmer </i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/c.svg" title="C" />
+            <img class="icon" src="assets/sdl.svg" title="SDL" />
+            <img class="icon" src="assets/javascript.svg" title="JavaScript" />
+            <img class="icon" src="assets/p5dotjs.svg" title="P5" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://llaumegui.itch.io/raycast-prototype" target="_blank">&nbsp;Itch.io&nbsp;</a>
+        &#183; <a href="proto-raycast.html" target="_blank">&nbsp;JS Prototype&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- PCM23 -->
+  <div class="project-cell Big">
+    <hr class="separator first-Big"> <!-- uncomment if not the first BIG project -->
+    <div class="project-content">
+      <p class="project-date">2023</p>
+      <div class="project-info">
+        <p class="project-title">Pro Cycling Manager 2023</p>
+        <p class="project-desc" lang="en"> <i>Manage a team of professional cyclists:<br> control the budget, recruit
+            young talent,
+            train riders and devise race strategies.</i> <br>
+          Made at <mark>&nbsp;Cyanide Studio - Nanterre&nbsp;</mark> during an Internship</p>
+        <p class="project-desc" lang="fr"> <i>Prenez la direction d'une équipe cycliste professionnelle: <br> maîtrise
+            du budget, recrutement des jeunes talents,
+            entrainements des cyclistes, et élaboration de la stratégie de course.</i> <br>
+          Réalisé chez <mark>&nbsp;Cyanide Studio - Nanterre&nbsp;</mark> pendant un Stage</p>
+        <br>
+        <div class="project-imgs">
+          <img class="project-preview"
+            src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(3).jpg?updatedAt=1693311750704" alt="game title">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(13).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(14).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i lang="en">UI Programmer Intern</i>
+          <i lang="fr">Programmeur UI Stagiaire</i>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://store.steampowered.com/app/2063610/Pro_Cycling_Manager_2023/"
+          target="_blank">&nbsp;Steam&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link" lang="en">
+        <a href="https://youtu.be/x7THOQd6FPo" target="_blank">&nbsp;Announcement&nbsp;</a>
+        &#183; <a href="https://youtu.be/kLUDPTGRDIo" target="_blank">&nbsp;Launch&nbsp;</a>
+      </div>
+      <div class="project-link" lang="fr">
+        <a href="https://youtu.be/x7THOQd6FPo" target="_blank">&nbsp;Annonce&nbsp;</a>
+        &#183; <a href="https://youtu.be/kLUDPTGRDIo" target="_blank">&nbsp;Lancement&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Links :</p>
+      <p class="link-title" lang="fr">Liens :</p>
+      <div class="project-link">
+        <a href="https://pro-cycling-manager.com/" target="_blank" lang="en">&nbsp;Game&nbsp;</a>
+        <a href="https://pro-cycling-manager.com/" target="_blank" lang="fr">&nbsp;Jeu&nbsp;</a>
+        &#183; <a href="http://www.cyanide-studio.com/" target="_blank">&nbsp;Cyanide&nbsp;</a>
+        &#183; <a href="https://www.nacongaming.com/" target="_blank">&nbsp;Nacon&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Gevaudan -->
+  <div class="project-cell Big">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2021 - 2023</p>
+      <div class="project-info">
+        <p class="project-title">Gévaudan: 1851</p>
+        <p class="project-desc" lang="en"> <i>A thriling investigation game in the Lozere's countryside.</i><br>
+          <mark>&nbsp;Master&nbsp;</mark> Graduation Project made in a Year and a half at <mark>&nbsp;Pôle3D -
+            Roubaix&nbsp;</mark>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Une enquête déroutante en Lozère sous le règne de Napoléon III.</i><br>
+          Projet de <mark>&nbsp;Master&nbsp;</mark>
+          réalisé en un an et demi à <mark>&nbsp;Pôle3D - Roubaix&nbsp;</mark>
+          <br>
+        </p>
+        <div class="project-imgs">
+          <video class="project-preview" preload="auto" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(10).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(11).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(12).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLES :</i>
+              <i lang="fr">RÔLES :</i>
+            </b></p>
+          <i lang="en">Gameplay Programmer | Tools Programmer | UI Programmer</i>
+          <i lang="fr">Programmeur Gameplay | Programmeur Outils | Programmeur UI</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+            <img class="icon" src="assets/houdini.svg" title="Houdini" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://pole3d.itch.io/gevaudan" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://youtu.be/YNa3VZWKvik" target="_blank">&nbsp;Trailer&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Social :</p>
+      <p class="link-title" lang="fr">Réseaux :</p>
+      <div class="project-link">
+        <a href="https://twitter.com/Gevaudan1851" target="_blank">&nbsp;Twitter&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Telo -->
+  <div class="project-cell Big">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2022</p>
+      <div class="project-info">
+        <p class="project-title">Telo</p>
+        <p class="project-desc" lang="en"> <i>Paint the world and bring life to the sea</i><br>
+          Made at <mark>&nbsp;Pôle3D - Roubaix&nbsp;</mark><br></p>
+        <p class="project-desc" lang="fr"> <i>Peins le monde et redonne vie à la mer</i><br>
+          Réalisé à <mark>&nbsp;Pôle3D - Roubaix&nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(15).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(16).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(17).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i lang="en">Additionnal Programmer</i>
+          <i lang="fr">Programmeur Additionnel</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://pole3d.itch.io/telo" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://youtu.be/8fCfbk7LWy4" target="_blank">&nbsp;Trailer&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- EchoClicker -->
+  <div class="project-cell Small">
+    <hr class="separator Small">
+    <div class="project-content">
+      <p class="project-date">2022</p>
+      <div class="project-info">
+        <p class="project-title">EchoClicker</p>
+        <p class="project-desc" lang="en"> <i>When you click, it gives Echoes</i><br>
+          First incremental Prototype made for a <mark>&nbsp;Private Jam&nbsp;</mark> at <mark>&nbsp;Pôle 3D -
+            Roubaix&nbsp;</mark>
+          <br>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Quand tu cliques, tu reçois des Échos</i><br>
+          Premier prototype incrémental créé pendant une <mark>&nbsp;Jam Privée&nbsp;</mark> à <mark>&nbsp;Pôle 3D -
+            Roubaix&nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(6).mp4">
+          </video>
+          <img class="project-preview" src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(2).png"
+            alt="Game preview">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(8).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Game Director </i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platforms :</p>
+      <p class="link-title" lang="fr">Plateformes :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+        <img class="icon" src="assets/android.svg" title="Android" style="position: relative; bottom: -5px;" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://llaumegui.itch.io/echoclicker" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://www.youtube.com/watch?v=6E8y8Wj22o4" target="_blank">&nbsp;Trailer&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Drunk Fist -->
+  <div class="project-cell Small">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2021</p>
+      <div class="project-info">
+        <p class="project-title">Drunk Fist</p>
+        <p class="project-desc" lang="en"> <i>Get Drunk and Use Your Skill to Annihilate Strange Cockroaches</i><br>
+          Made at <mark>&nbsp;Home&nbsp;</mark> for <mark>&nbsp;Ludum Dare 49&nbsp;</mark><br></p>
+        <p class="project-desc" lang="fr"> <i>Utilisez le pouvoir de l'alcoolisme pour combattre d'immenses
+            cafards</i><br>
+          Fait à la <mark>&nbsp;Maison&nbsp;</mark> pour la <mark>&nbsp;Ludum Dare 49&nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <img class="project-preview" src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(1).jpg" alt="Game Title">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(2).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(4).mp4?updatedAt=1693307380775">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Lead Programmer</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://nicolasmcls.itch.io/drunk-fist" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://youtu.be/62J-LDdnxRI" target="_blank">&nbsp;Gameplay&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Faster than a Speeding Puppet -->
+  <div class="project-cell Small">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2021</p>
+      <div class="project-info">
+        <p class="project-title">Faster than a Speeding Puppet</p>
+        <p class="project-desc" lang="en"> <i>Dash through the level by transfering your puppet's speed to yourself
+            !</i><br>
+          Made at <mark>&nbsp;Home&nbsp;</mark> for <mark>&nbsp;GMTK Game Jam 2021 &nbsp;</mark><br></p>
+        <p class="project-desc" lang="fr"> <i>Transfère la vitesste de ta marionnette à toi-même pour parcourir le
+            niveau !</i><br>
+          Fait à la <mark>&nbsp;Maison&nbsp;</mark> pour la <mark>&nbsp;GMTK Game Jam 2021 &nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <img class="project-preview full" src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(1).png"
+            alt="Game Title">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/faster.mp4">
+          </video>
+          <img class="project-preview" src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(5).png"
+            alt="Game Preview">
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Game Director</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://pierre-cilluffo.itch.io/faster-than-a-speeding-puppet" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Sewer's Plague -->
+  <div class="project-cell Small">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2021</p>
+      <div class="project-info">
+        <p class="project-title">Sewer's Plague - Into the nest..</p>
+        <p class="project-desc" lang="en"> <i>Blast your way through these putrid catacombs and defeat many ugly
+            creatures in this
+            wacky scorer game!</i><br>
+          Made at <mark>&nbsp;Home&nbsp;</mark> for <mark>&nbsp;Ludum Dare 48&nbsp;</mark><br></p>
+        <p class="project-desc" lang="fr"> <i>Fraye-toi un chemin à travers ces catacombes putrides et affronte de
+            nombreuses créatures laides dans ce scorer délirant !</i><br>
+          Fait à la <mark>&nbsp;Maison&nbsp;</mark> pour la <mark>&nbsp;Ludum Dare 48&nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <img class="project-preview"
+            src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(2).jpg?updatedAt=1693311204466" alt="Game Title">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(7).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(9).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Lead Programmer</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://nicolasmcls.itch.io/sewers-plague-into-the-nest" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://www.youtube.com/watch?v=iHDU7XB0ro8" target="_blank">&nbsp;Gameplay&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Tetris SFML -->
+  <div class="project-cell Small">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2021</p>
+      <div class="project-info">
+        <p class="project-title">Tetris SFML</p>
+        <p class="project-desc" lang="en"> <i>Just a regular Tetris</i><br>
+          Project made to learn <mark>&nbsp;C++&nbsp;</mark> & <mark>&nbsp;SFML&nbsp;</mark> for a <mark>&nbsp;Private
+            Jam&nbsp;</mark> at
+          <mark>&nbsp;Pôle
+            3D - Roubaix&nbsp;</mark><br>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Juste un simple Tetris</i><br>
+          Projet fait pour apprendre le <mark>&nbsp;C++&nbsp;</mark> & le <mark>&nbsp;SFML&nbsp;</mark> pour une
+          <mark>&nbsp;Jam
+            Privée&nbsp;</mark> à <mark>&nbsp;Pôle
+            3D - Roubaix&nbsp;</mark><br>
+        </p>
+        <div class="project-imgs">
+          <img src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(4).png" class="project-preview fit-preview"
+            alt="Game Preview">
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i lang="en">Programmer</i>
+          <i lang="fr">Programmeur</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/cpp.svg" title="C++" />
+            <img class="icon" src="assets/sfml.svg" title="SFML" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://llaumegui.itch.io/yet-another-tetris-remake" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Blasted -->
+  <div class="project-cell Small">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2020</p>
+      <div class="project-info">
+        <p class="project-title">Blasted</p>
+        <p class="project-desc" lang="en"> <i>A Hotline Miami eco+ game</i><br>
+          First project made entirely by <mark>&nbsp;Myself&nbsp;</mark> for a <mark>&nbsp;Private Jam&nbsp;</mark> at
+          <mark>&nbsp;Pôle
+            3D - Roubaix&nbsp;</mark><br>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Un Hotline Miami version eco+</i><br>
+          Premier projet réalisé par <mark>&nbsp;Moi-même&nbsp;</mark> pour une <mark>&nbsp;Jam Privée&nbsp;</mark> à
+          <mark>&nbsp;Pôle
+            3D - Roubaix&nbsp;</mark><br>
+        </p>
+        <div class="project-imgs">
+          <img class="project-preview"
+            src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(3).png?updatedAt=1693311637207" alt="Game Title">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(19).mp4">
+          </video>
+          <img class="project-preview" src="https://ik.imagekit.io/llaumegui/Images%20Web/%20(4).jpg"
+            alt="Game Preview">
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i>Game Director</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://llaumegui.itch.io/blasted" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://youtu.be/-HbdG9fA1lc" target="_blank">&nbsp;Speedrun WR&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Gravitum -->
+  <div class="project-cell Big">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2020</p>
+      <div class="project-info">
+        <p class="project-title">Gravitum</p>
+        <p class="project-desc" lang="en"> <i>Game in an atomic universe based on gravity.</i><br>
+          First time developing on <mark>&nbsp;Unity Engine,&nbsp;</mark> made in 3 months at <mark>&nbsp;Pôle 3D -
+            Roubaix&nbsp;</mark><br></p>
+        <p class="project-desc" lang="fr"> <i>Jeu basé sur la gravité à l'échelle atomique.</i><br>
+          Premier projet réalisé sous <mark>&nbsp;Unity Engine,&nbsp;</mark> fait en 3 mois à <mark>&nbsp;Pôle 3D -
+            Roubaix&nbsp;</mark><br></p>
+        <div class="project-imgs">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(18).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(3).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(5).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLE :</i>
+              <i lang="fr">RÔLE :</i>
+            </b></p>
+          <i lang="en">Programmer</i>
+          <i lang="fr">Programmeur</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://pole3d.itch.io/gravitum" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://vimeo.com/384594873" target="_blank">&nbsp;Trailer&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <!-- Matter -->
+  <div class="project-cell Big">
+    <hr class="separator">
+    <div class="project-content">
+      <p class="project-date">2020</p>
+      <div class="project-info">
+        <p class="project-title">Matter - Tomb of the Gods</p>
+        <p class="project-desc" lang="en"> <i>Interact with the power of the rifts to explore the world</i><br>
+          <mark>&nbsp;License&nbsp;</mark> Graduation project, made in 6 months at <mark>&nbsp;Pôle 3D -
+            Roubaix&nbsp;</mark>
+          <br>
+        </p>
+        <p class="project-desc" lang="fr"> <i>Utilise le pouvoir des failles pour explorer le monde</i><br>
+          Projet de <mark>&nbsp;License&nbsp;</mark> réalisé en 6 mois à <mark>&nbsp;Pôle 3D - Roubaix&nbsp;</mark>
+          <br>
+        </p>
+        <div class="project-imgs">
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(20).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(1).mp4">
+          </video>
+          <video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://ik.imagekit.io/llaumegui/Videos%20Web/%20(21).mp4">
+          </video>
+        </div>
+        <hr>
+        <div class="project-role">
+          <p><b>
+              <i lang="en">ROLES :</i>
+              <i lang="fr">RÔLES :</i>
+            </b></p>
+          <i lang="en">Programmer | Level Designer</i>
+          <i lang="fr">Programmeur | Level Designer</i>
+        </div>
+        <div class="project-tools">
+          <p><b>
+              <i lang="en">MADE USING :</i>
+              <i lang="fr">RÉALISÉ AVEC :</i>
+            </b></p>
+          <div class="project-icons">
+            <img class="icon" src="assets/csharp.svg" title="C#" />
+            <img class="icon" src="assets/unity.svg" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-links">
+      <p class="link-title" lang="en">Platform :</p>
+      <p class="link-title" lang="fr">Plateforme :</p>
+      <div style="margin-left: 10px;">
+        <img class="icon" src="assets/windows.svg" title="Windows" />
+      </div>
+      <p class="link-title" lang="en">Play :</p>
+      <p class="link-title" lang="fr">Jouer :</p>
+      <div class="project-link">
+        <a href="https://pole3d.itch.io/matter" target="_blank">&nbsp;Itch.io&nbsp;</a>
+      </div>
+      <p class="link-title" lang="en">Watch :</p>
+      <p class="link-title" lang="fr">Regarder :</p>
+      <div class="project-link">
+        <a href="https://youtu.be/opGd0NML8R4" target="_blank">&nbsp;Trailer&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <hr class="end">
+  <script type="text/javascript" src="js/filter.js"></script>
+  <script type="text/javascript" src="js/tools.js"></script>
+  <script>
+    // DEFAULT
+    localize("en");
+    filterSelection("all");
+
+    history.scrollRestoration = "manual";
+    $(document).ready(function () {
+      $(window).scrollTop(0);
+    });
+
+    $(window).on('beforeunload', function () {
+      $(window).scrollTop(0);
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- 
+  TEMPLATE VIDEO
+<video class="project-preview" autoplay="" loop="" muted="" playsinline="">
+  <source src="link.mp4">
+</video>
+
+  TEMPLATE IMG
+<img class="project-preview" src="path.jpg">
+-->

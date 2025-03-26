@@ -1,0 +1,23 @@
+networks:
+  exoBridge:
+    driver: bridge
+
+services:    
+  container-a:
+    container_name: containerA
+    image: exo-ping
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    networks:
+      - exoBridge
+      
+  container-b:
+    container_name: containerB
+    image: exo-ping
+    tty: true
+    stdin_open: true
+    networks:
+      - exoBridge

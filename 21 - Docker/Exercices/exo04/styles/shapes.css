@@ -1,0 +1,84 @@
+.top-rectangle {
+    background: var(--dark-blue);
+    transform: rotate(-15deg);
+
+    position: absolute;
+    display: block;
+    z-index: -2;
+
+    overflow: hidden;
+}
+
+.bigRect {
+    width: 3000px;
+    height: 250px;
+    top: -340px;
+    left: -100px;
+
+    animation-duration: 1s;
+    animation-name: slidein-big;
+}
+
+.rectDM {
+    background: var(--light-blue);
+}
+
+@keyframes slidein-big {
+    from {
+        width: 200%;
+        opacity: 0;
+        top: 1000px;
+    }
+
+    to {
+        opacity: 1;
+        top: -340px;
+    }
+}
+
+.smallRect {
+    width: 3000px;
+    height: 25px;
+    top: -70px;
+    left: -75px;
+
+    animation-duration: 1s;
+    animation-name: slidein-small;
+
+}
+
+@keyframes slidein-small {
+    from {
+        width: 200%;
+        opacity: 0;
+        top: 1500px;
+    }
+
+    to {
+        opacity: 1;
+        top: -70px;
+    }
+}
+
+.dropShadow {
+    position: absolute;
+    left: 0;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.filter-gold {
+    filter: invert(83%) sepia(42%) saturate(6411%) hue-rotate(9deg) brightness(91%) contrast(79%);
+}
+
+.filter-white {
+    filter: invert(99%) sepia(0%) saturate(165%) hue-rotate(267deg) brightness(116%) contrast(100%);
+}
+
+@media only screen and (max-width:600px) {
+
+    .top-rectangle,
+    .dropShadow {
+        display: none;
+    }
+}

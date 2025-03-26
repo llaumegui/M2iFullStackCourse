@@ -1,0 +1,254 @@
+:root {
+    --gold: #bd951b;
+    --light-blue: #057BBD;
+    --blue: #04598b;
+    --dark-blue: #011724;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+mark {
+    color: black;
+    background-color: var(--gold);
+    text-decoration: none;
+}
+
+a:hover,
+mark:hover {
+    color: white
+}
+
+p {
+    margin: 0;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+
+    overflow-x: hidden;
+
+    background-color: white;
+}
+
+.profile-logo {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.dark-mode {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.top-params {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    gap: 5px;
+    text-align: center;
+
+    height: 40px;
+}
+
+.project-cell {
+    display: none;
+}
+
+.profile,
+.project-links {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.name {
+    font-family: 'Staatliches';
+    font-size: 25px;
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+.project-info {
+    display: grid;
+    grid-row-gap: 10px;
+    margin-left: 10px;
+}
+
+.project-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.project-imgs {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-preview {
+    width: 480px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.fit-preview {
+    height: auto;
+}
+
+.full {
+    object-fit: scale-down;
+}
+
+.project-tools {
+    display: grid;
+    grid-template-rows: 25px 25px;
+    text-align: right;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.icon {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.project-title,
+.project-desc,
+.project-link,
+.project-role,
+.link,
+.name {
+    text-align: left;
+    margin-left: 10px;
+    line-height: 25px;
+    margin-bottom: 3px;
+}
+
+.project-title {
+    font-size: 75px;
+    font-family: 'Staatliches';
+    line-height: 75px;
+}
+
+.project-title,
+.project-desc,
+.project-role {
+    margin-left: 210px;
+}
+
+.project-date,
+.link-title {
+    font-weight: 700;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.project-date {
+    text-align: left;
+    margin-left: 150px;
+}
+
+hr.separator {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    width: 100px;
+    margin-left: -1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+}
+
+hr.end {
+    margin-top: 100px;
+    border-width: 0;
+}
+
+hr.first-Small,
+hr.first-Big {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block;
+}
+
+@media only screen and (max-width:600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .top-params {
+        height: 25px;
+    }
+
+    .project-date {
+        margin: 10px;
+    }
+
+    .project-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .project-content {
+        margin-right: 10px;
+    }
+
+    .project-title,
+    .project-desc,
+    .project-role {
+        margin-left: 0px;
+    }
+
+    .project-links,
+    .profile {
+        grid-template-columns: 26% 64%;
+        margin-right: 0px;
+    }
+
+    .profile-logo {
+        width: 40%;
+    }
+
+    .project-imgs {
+        width: 100%;
+    }
+
+    .project-preview {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-tools {
+        margin-right: 0;
+    }
+
+    .icon {
+        width: 20px;
+    }
+
+    .link-title {
+        margin-right: 0px;
+    }
+}
