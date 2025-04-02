@@ -9,9 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    //var password = builder.Configuration["DB_PASSWORD"];
-    //options.UseSqlServer(builder.Configuration.GetConnectionString("Default").Replace("DB_PASSWORD", password));
-    options.UseSqlServer("Server=tcp:gl-server.database.windows.net,1433;Initial Catalog=gl-exo04;Persist Security Info=False;User ID=m2i.dotnet6@utopios.onmicrosoft.com;Password={MY_PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Authentication=Active Directory Password;");
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 var app = builder.Build();
 
