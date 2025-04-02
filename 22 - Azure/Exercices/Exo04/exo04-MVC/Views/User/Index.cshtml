@@ -1,0 +1,40 @@
+@model List<User>
+
+@{
+    
+}
+
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>@Html.DisplayNameForInnerType((User u) => u.Id)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.FirstName)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.LastName)</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.Id</td>
+            <td>@u.FirstName</td>
+            <td>@u.LastName</td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@u.Id" class="btn btn-danger">
+                    <span class="bi bi-trash"></span> X
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<a asp-action="Create" class="btn btn-success ms-auto">
+    <span class="bi bi-plus-circle"></span> +
+</a>
+</body>
+</html>

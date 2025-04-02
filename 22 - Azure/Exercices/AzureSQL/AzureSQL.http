@@ -1,0 +1,6 @@
+@AzureSQL_HostAddress = http://localhost:5020
+
+GET {{AzureSQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
