@@ -1,0 +1,6 @@
+@exo05_HostAddress = http://localhost:5223
+
+GET {{exo05_HostAddress}}/contacts/
+Accept: application/json
+
+###
